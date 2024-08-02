@@ -14,7 +14,14 @@ import { MenuIcon } from "lucide-react";
 
 export function Sidebar() {
   const menuOptions = (
+    <>
     <NewDocumentButton />
+    {/* my docs */}
+
+    {/* shared with me */}
+    </>
+
+
   )
   return (
     <div className="p-2 md:p-5 bg-gray-200 relative">
