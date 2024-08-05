@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { ArrowLeftCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="text-4xl font-bold">Welcome to your Next.js app!</h1>
+    <main className="flex flex-col md:flex-row space-x-2 items-center animate-pulse">
+      <ArrowLeftCircle size={32} className="w-12 h-12" />
+      <h1 className="font-bold">Get started with creating a New Document</h1>
 
-      <Button>Click me</Button>
     </main>
   );
 }
