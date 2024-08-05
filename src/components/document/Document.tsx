@@ -33,8 +33,8 @@ export function Document({ id }: { id: string }) {
 
   return (
     <div>
-      <div>
-        <form onSubmit={updateTitle}>
+      <div className="flex mx-auto justify-between pb5 max-w-6xl">
+        <form onSubmit={updateTitle} className="flex flex-1 space-x-2">
           {/* update title */}
           <Input
             value={input}
