@@ -5,12 +5,15 @@ import { Button } from "../ui/button";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
+import { useOwner } from "@/lib/useOwner";
 
 export function Document({ id }: { id: string }) {
   const [data, loading, error ] = useDocumentData(doc(db, "documents", id));
 
   const [input, setInput] = React.useState<string>("");
   const [isUpdating, startTransition] = useTransition();
+
+  const isOwner = useOwner()
 
   useEffect(() => {
     if (data) {
