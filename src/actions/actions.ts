@@ -9,6 +9,8 @@ export async function createNewDocument() {
 
   const { sessionClaims } = await auth()
 
+  console.log('====> sessionClaims:', sessionClaims)
+
   // create new document
   const docCollectionRef = adminDb.collection("documents")
   const newDocRef = await docCollectionRef.add({
