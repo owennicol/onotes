@@ -38,21 +38,20 @@ export function FollowPointer({
         opacity: 0,
       }}
     >
-      <svg
-        stroke={colour}
-        fill={colour}
-        strokeWidth="1"
-        viewBox="0 0 16 16"
-        className={`h-6 w-6 text-[${colour}] transform -rotate-[70deg] -translate-x-
-[12px] -translate-y-[10px] stroke-[${colour}]`}
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M14.082 2.182.5.5 0 0 1.103.557L8.528 15.467.5.5 0 0 1-.917-.007L5. 57 10.694.803 8.652.5.5 0 0 1-.006-.916112.728-5.657a.5.5 0 0 1 -556.103z"></path>
-      </svg>
+      <svg width="32" height="44" viewBox="0 0 24 36" fill="none">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="500%" y2="0%">
+          <stop offset="0%" stopColor={colour} />
+          <stop offset="100%" stopColor={colour} />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#gradient)"
+        d="M0.928548 2.18278C0.619075 1.37094 1.42087 0.577818 2.2293 0.896107L14.3863 5.68247C15.2271 6.0135 15.2325 7.20148 14.3947 7.54008L9.85984 9.373C9.61167 9.47331 9.41408 9.66891 9.31127 9.91604L7.43907 14.4165C7.09186 15.2511 5.90335 15.2333 5.58136 14.3886L0.928548 2.18278Z"
+      />
+    </svg>
       <motion.div
-      className="px-2 py-2 bg-neutral-200 text-black font-bold whitespace-nowrap min-w-max text-xs rounded-full"
+      className="px-2 py-2 bg-neutral-200 text-white font-bold whitespace-nowrap min-w-max text-xs rounded-full"
         style={
           {backgroundColor: colour,}
         }

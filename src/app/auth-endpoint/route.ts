@@ -1,7 +1,7 @@
 import { adminDb } from "@/lib/firebase-admin";
 import { liveblocks } from "@/lib/liveblocks";
 import { auth } from "@clerk/nextjs/server";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   auth().protect()
@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
     const { body, status} = await session.authorize()
 
     return new Response(body, { status })
+  } else {
+    return NextResponse.json('You are not in this room', { status: 403 })
   }
 
 }
